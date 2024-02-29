@@ -18,7 +18,29 @@ bibliography: references.bib
 #| warning: false
 #| message: false
 
+#install.packages(c('rmarkdown', 'babynames', 'gh','here','httr','janitor','jsonlite', 'knitr','lubridate','pdftools','purrr','rvest','spotifyr', 'tesseract', 'tidyverse','usethis', 'xml2' ))
+
+##install.packages("tinytex")
+
+library(tinytex)
+library(rmarkdown)
+library(babynames)
+library(gh)
+library(here)
+library(httr)
+library(janitor)
+library(jsonlite)
+library(knitr)
+library(lubridate)
+library(pdftools)
+library(purrr)
+library(rvest)
+library(spotifyr)
+library(tesseract)
 library(tidyverse)
+library(usethis)
+library(xml2)
+
 ```
 
 
