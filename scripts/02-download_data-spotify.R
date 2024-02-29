@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Downloads and saves the data from NASA API
+# Purpose: Downloads and saves the data from the Spotify API
 # Author: Rohan Alexander
 # Date: 29 February 2023
 # Contact: rohan.alexander@utoronto.ca
@@ -9,20 +9,14 @@
 
 
 #### Workspace setup ####
-library(httr)
 library(tidyverse)
+library(spotifyr)
 
 
 #### Download data ####
-NASA <- 
-  GET("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2024-02-28")
+beyonce <- get_artist_audio_features("beyonce")
 
-content(NASA)
-
-content(NASA)$explanation
-
-knitr::include_graphics(content(NASA)$url)
-
+saveRDS(beyonce, "data/raw_data/beyonce.rds")
 
 #### Save data ####
 
